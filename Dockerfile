@@ -62,7 +62,9 @@ RUN mamba run -n sam3d-objects pip install -e '.[dev]' && \
     mamba run -n sam3d-objects pip install -e '.[inference]'
 
 # Apply patches
-RUN cd /workspace/patching && ./hydra || true
+# Note: The hydra patch may fail if the hydra version doesn't match expectations (1.3.2)
+# This is expected behavior and won't break the build
+RUN cd /workspace/patching && ./hydra || echo "WARNING: Hydra patch failed or not needed. This may be expected if hydra version != 1.3.2"
 
 # Set the default command to activate the environment
 CMD ["mamba", "run", "--no-capture-output", "-n", "sam3d-objects", "/bin/bash"]

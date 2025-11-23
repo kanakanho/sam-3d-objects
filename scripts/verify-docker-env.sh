@@ -10,8 +10,8 @@ echo ""
 
 # Activate conda environment
 echo "1. Activating sam3d-objects environment..."
-eval "$(conda shell.bash hook)"
-conda activate sam3d-objects
+eval "$(mamba shell.bash hook)"
+mamba activate sam3d-objects
 echo "✓ Environment activated"
 echo ""
 
