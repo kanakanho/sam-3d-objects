@@ -27,7 +27,25 @@ SAM 3D Objects is one part of SAM 3D, a pair of models for object and human mesh
 
 ## Installation
 
+### Native Installation
+
 Follow the [setup](doc/setup.md) steps before running the following.
+
+### Docker Installation (Recommended for Development)
+
+For a containerized development environment with all dependencies pre-installed:
+
+```bash
+# Build and start the Docker container
+docker-compose up -d
+
+# Connect to the container
+docker-compose exec sam3d-dev mamba run -n sam3d-objects bash
+```
+
+Or use [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) to develop inside the container directly.
+
+See the [Docker setup guide](doc/docker-setup.md) for detailed instructions.
 
 ## Single or Multi-Object 3D Generation
 
