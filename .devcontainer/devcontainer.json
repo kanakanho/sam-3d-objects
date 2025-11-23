@@ -51,7 +51,7 @@
   },
   
   // Use 'postCreateCommand' to run commands after the container is created
-  "postCreateCommand": "echo 'Container setup complete! Activate the environment with: mamba activate sam3d-objects'",
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
   
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root
   "remoteUser": "root",

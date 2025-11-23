@@ -37,7 +37,7 @@ For a containerized development environment with all dependencies pre-installed:
 
 ```bash
 # Build and start the Docker container
-docker-compose up -d
+docker-compose build && docker-compose up -d
 
 # Connect to the container
 docker-compose exec sam3d-dev mamba run -n sam3d-objects bash
@@ -45,7 +45,9 @@ docker-compose exec sam3d-dev mamba run -n sam3d-objects bash
 
 Or use [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) to develop inside the container directly.
 
-See the [Docker setup guide](doc/docker-setup.md) for detailed instructions.
+**Documentation:**
+- 🚀 [Quick Start (Japanese)](doc/quick-start-docker-ja.md) - Get started in 3 steps
+- 📖 [Full Docker Setup Guide (Japanese)](doc/docker-setup.md) - Detailed instructions and troubleshooting
 
 ## Single or Multi-Object 3D Generation
 

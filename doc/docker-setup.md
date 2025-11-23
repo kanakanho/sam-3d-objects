@@ -101,6 +101,15 @@ VSCode は自動的にコンテナ内でワークスペースを開き、すべ�
 
 コンテナ内で以下のコマンドを実行して、環境が正しくセットアップされているか確認します:
 
+### 方法 A: 検証スクリプトを使用（推奨）
+
+```bash
+# コンテナ内で検証スクリプトを実行
+/workspace/scripts/verify-docker-env.sh
+```
+
+### 方法 B: 手動で確認
+
 ```bash
 # conda 環境をアクティベート
 mamba activate sam3d-objects
